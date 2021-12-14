@@ -1,0 +1,29 @@
+CREATE TABLE Department ( 
+  dept_code INT(6) NOT NULL AUTO_INCREMENT,
+  dept_name VARCHAR(40) NOT NULL,
+  hod VARCHAR(20) NOT NULL,
+  PRIMARY KEY (dept_code)
+);
+
+CREATE TABLE Student ( 
+  student_id INT(6) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(60) NOT NULL,
+  address VARCHAR(30) NOT NULL,
+  tel INT(20) NOT NULL,
+  dept_code INT,
+  PRIMARY KEY(student_id),
+  FOREIGN KEY(dept_code) REFERENCES Department(dept_code)
+);
+
+INSERT INTO Department (dept_name, hod)
+VALUES ("Computer Science", "Abela"),
+       ("Electrical Engineering", "Bbela"),
+       ("Health Science", "Cbela"),
+       ("Agricultural Studies", "Dbela");
+       
+INSERT INTO Student(name, address, tel, dept_code)
+VALUES ("Angela", "no 1 university street", 0712345687, 1),
+       ("Bngela", "no 1 university street", 0722345689, 1),
+       ("Cngela", "no 2 university street", 0732325689, 2),
+       ("Dngela", "no 2 university street", 0742345689, 3),
+       ("Engela", "no 3 university street", 0752345689, 4);
