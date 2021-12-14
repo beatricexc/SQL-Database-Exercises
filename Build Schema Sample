@@ -27,3 +27,7 @@ VALUES ("Angela", "no 1 university street", 0712345687, 1),
        ("Cngela", "no 2 university street", 0732325689, 2),
        ("Dngela", "no 2 university street", 0742345689, 3),
        ("Engela", "no 3 university street", 0752345689, 4);
+
+UPDATE Department
+SET hod = "Victoria"
+WHERE dept_name = "Computer Science";
